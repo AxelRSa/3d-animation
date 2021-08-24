@@ -1,0 +1,125 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+svg {
+	pointer-events: none;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 150px;
+	width: 300px;
+	height: 300px;
+	animation: sceneRotate 5s infinite linear;
+	transform: rotateZ(0deg) rotateY(10deg) rotateX(-10deg);
+	transform-style: preserve-3d;
+	background-color: #0005;
+}
+
+.container__arrow {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30px;
+	height: 30px;
+}
+
+.container__arrow--left {
+	left: -50px;
+}
+
+.container__arrow--right {
+	right: -80px;
+}
+
+.container__arrow--top {
+	top: -50px;
+}
+
+.container__arrow--bottom {
+	bottom: -70px;
+}
+
+.container__svg {
+	width: 100%;
+	height: 100%;
+}
+
+.container__svg--left {
+	transform: rotate(90deg);
+}
+
+.container__svg--right {
+	transform: rotate(-90deg);
+}
+
+.container__svg--top {
+	transform: rotate(180deg);
+}
+
+.container__button {
+	position: absolute;
+	bottom: -30px;
+	right: -30px;
+	width: 30px;
+	height: 30px;
+}
+
+.cube {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+}
+
+.cube__side {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cube__side--front {
+	background-color: lightblue;
+	transform: translateZ(50px);
+}
+
+.cube__side--back {
+	background-color: steelblue;
+	transform: translateZ(-50px);
+}
+
+.cube__side--left {
+	background-color: orange;
+	transform: rotateY(90deg) translateZ(-50px);
+	;
+}
+
+.cube__side--right {
+	background-color: pink;
+	transform: rotateY(90deg) translateZ(50px);
+}
+
+.cube__side--top {
+	background-color: lightgreen;
+	transform: rotateX(90deg) translateZ(50px);
+}
+
+.cube__side--bottom {
+	background-color: lightgray;
+	transform: rotateX(90deg) translateZ(-50px);
+}
+
+.cube__img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
